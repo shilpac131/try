@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html >
+<title>IOT PROJECT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url({{ url_for('static', filename='photos/agri1.jpg') }});
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.bgimg2 {
+  background-image: url({{ url_for('static', filename='photos/agri3.jpg') }});
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.w3-bar .w3-button {
+  padding: 0px;
+}
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">SMART AGRICULTURE SYSTEM</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <form action="{{ url_for('dekho')}}"method="post">
+	
+        <button type="submit" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off " value="Submit">SHOW</button>
+    </form>
+
+    
+    <p class="w3-large w3-text-black">{{ prediction_text }}</p>
+     </div>
+</div>
+<p> </p>
+<p></p>
+<div class="bgimg2 ">
+<center><h1 class="w3-jumbo w3-animate-top w3-text-white">Data Anlaysis</center></h1>
+<p class="w3-jumbo w3-animate-top w3-text-black"><center>We have 4 parameters : Humidity,Temperature,Soil Moisture,Type of Soil</center></p>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="{{ url_for('static', filename='photos/one.png') }}" alt="Cinque Terre" width="600" height="1000">
+    </a>
+    <div class="desc w3-text-blue">Humidity V/S Soil Moisture</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="{{ url_for('static', filename='photos/two.png') }}" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc w3-text-yellow">Temperature V/S Type of Soil</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="{{ url_for('static', filename='photos/three.png') }}" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Humidity V/S Type of Soil</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="{{ url_for('static', filename='photos/four.png') }}" alt="Mountains" width="600" height="900">
+    </a>
+    <div class="desc">Soil Moisture V/S Temperature</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  
+</div>
+</body>
+</html>
+
+
+ </div>
+
+
+</body>
+</html>
